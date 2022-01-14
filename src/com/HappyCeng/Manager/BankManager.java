@@ -1,12 +1,13 @@
 package com.HappyCeng.Manager;
 
 import com.HappyCeng.Entity.Bank;
-import com.HappyCeng.Entity.Person;
 import com.HappyCeng.Entity.ProcessResult;
+
+import java.io.IOException;
 
 public class BankManager {
 
-    public static ProcessResult addBank(Bank bank){
+    public static ProcessResult addBank(Bank bank) throws IOException {
         ProcessResult result = new ProcessResult();
         FileProcess fileProcess = new FileProcess();
 

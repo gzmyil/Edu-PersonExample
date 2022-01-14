@@ -4,6 +4,8 @@ import com.HappyCeng.Entity.Bank;
 import com.HappyCeng.Entity.Person;
 import com.HappyCeng.Entity.ProcessResult;
 
+import java.io.IOException;
+
 public class ProcessVM {
     /*
     * extends almıştık ancak burası birden fazla classa yönlendirme yaptığımız yer.
@@ -52,11 +54,12 @@ public class ProcessVM {
         return result;
     }
 
-    public static Person getPersonInfo(){ //burayıda düzenlersiniz :)
+    public static Person getPersonInfo() throws IOException { //burayıda düzenlersiniz :)
         PersonManager personManager = new PersonManager();
         Person person = new Person();
 
         person = personManager.getPerson();
+
 
         return person;
     }

@@ -3,9 +3,11 @@ package com.HappyCeng.Manager;
 import com.HappyCeng.Entity.Person;
 import com.HappyCeng.Entity.ProcessResult;
 
+import java.io.IOException;
+
 public class PersonManager {
 
-    public static ProcessResult addPerson(Person person){
+    public static ProcessResult addPerson(Person person) throws IOException {
         ProcessResult result = new ProcessResult();
         FileProcess fileProcess = new FileProcess();
 
@@ -23,7 +25,7 @@ public class PersonManager {
         return result;
     }
 
-    public static Person getPerson(){ //buraya person id eklenecek ve kişiye göre sorgulama yapılacak.
+    public static Person getPerson() throws IOException { //buraya person id eklenecek ve kişiye göre sorgulama yapılacak.
         Person person = new Person();
         FileProcess fileProcess = new FileProcess();
 
@@ -31,7 +33,7 @@ public class PersonManager {
         int index = 0,index2 = 0;
 
         try{
-            personInfo = fileProcess.readFilePerson();
+            personInfo = fileProcess.readFilePerson(1);
 
             index = personInfo.indexOf("#");
             person.setId(Integer.parseInt(personInfo.substring(0,index)));
