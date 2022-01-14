@@ -20,6 +20,7 @@ public class Main {
         person.setSoyad("Mutlu");
         person.setTckn("12313131");
 
+
         result = processVM.kisiEkle(person);
 
         /*
